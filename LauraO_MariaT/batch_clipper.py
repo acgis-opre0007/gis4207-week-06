@@ -2,11 +2,11 @@ import sys
 import arcpy
 import os
 
-arcpy.env.workspace = r'..\..\..\data'
+arcpy.env.workspace = r'..\..\..\..\data\BatchClipData'
 
-sites = r'..\..\..\data\BatchClipData\Sites'
-clip = r'..\..\..\data\BatchClipData\TargetData'
-out = r'..\..\..\data\BatchClipData\output'
+sites = r'..\..\..\..\data\BatchClipData\Sites'
+clip = r'..\..\..\..\data\BatchClipData\TargetData'
+out = r'..\..\..\..\data\BatchClipData\output'
 
 feature_class = arcpy.ListFeatureClasses()
 
