@@ -11,8 +11,10 @@ def main():
         print(f"Usage: data_prep.py <in_gdbs_base_folder> <out_gdb> <out_feature_dataset>")
         sys.exit(1)
     
-    if not arcpy.Exists()
-
+    if not arcpy.Exists(file):
+        print(f"File does not exist")
+        sys.exit(2)
+        
 def GdbsToFds():  # GDBs To Feature Dataset
 
     # To allow overwriting outputs change overwriteOutput option to True.
