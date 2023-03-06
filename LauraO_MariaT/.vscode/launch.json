@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {"name": "Python: Current File",
+        "type": "python",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "stopOnEntry": true,
+        "justMyCode": false
+    }, 
+    {
+        "name": "batch clipper with args",
+        "type": "python",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "stopOnEntry": true,
+        "justMyCode": false,
+        "args": ["C:\\acgis\\gis4207\\week_06\\data\\BatchClipData",
+        "C:\\acgis\\gis4207\\week_06\\data\\BatchClipData\\sites",
+        "C:\\acgis\\gis4207\\week_06\\data\\BatchClipData\\output"]
+    },
+    { 
+        "name": "data_prep with args",
+        "type": "python",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "stopOnEntry": true,
+        "justMyCode": false,
+        "args": ["C:\\acgis\\gis4207\\data\\Surrey",
+        "C:\\acgis\\gis4207\\data\\Surrey\\out_gdb",
+        "C:\\acgis\\gis4207\\data\\Surrey\\out_feature_dataset"]
+    }
+]
+}
