@@ -1,24 +1,13 @@
 import arcpy
-import os
 from sys import argv
 
-
-def main():
-    if len(sys.argv) !=4:
-        print(f"Usage: data_prep.py <in_gdbs_base_folder> <out_gdb> <out_feature_dataset>")
-        sys.exit(1)
-    
-    if not arcpy.Exists(file):
-        print(f"File does not exist")
-        sys.exit(2)
-        
 def GdbsToFds():  # GDBs To Feature Dataset
 
     # To allow overwriting outputs change overwriteOutput option to True.
     arcpy.env.overwriteOutput = False
 
     # Model Environment settings
-    with arcpy.EnvManager(scratchWorkspace=r"C:\acgis\gis4207\week_06\lab\gis4207-week-06\LauraO_MariaT\AppData\Local\Temp\ArcGISProTemp23072\47ee5f44-6f3c-41a1-8c6c-f605bb5859c8\Default.gdb", workspace=r"C:\acgis\gis4207\week_06\lab\gis4207-week-06\LauraO_MariaT\AppData\Local\Temp\ArcGISProTemp23072\47ee5f44-6f3c-41a1-8c6c-f605bb5859c8\Default.gdb"):
+    with arcpy.EnvManager(scratchWorkspace=r"C:\acgis\GIS4207_prog\week_06\lab\AppData\Local\Temp\ArcGISProTemp23072\47ee5f44-6f3c-41a1-8c6c-f605bb5859c8\Default.gdb", workspace=r"C:\acgis\GIS4207_prog\week_06\lab\AppData\Local\Temp\ArcGISProTemp23072\47ee5f44-6f3c-41a1-8c6c-f605bb5859c8\Default.gdb"):
         elementary_school_catchments = "A:\\Winter2021\\GIS4211\\Assessments\\A1\\01_SourceData\\Elementary_School_Catchments_GDB\\elementary_school_catchments.gdb\\elementary_school_catchments"
         _02_Working_Folder_for_Geodatabase = "A:\\Winter2021\\GIS4211\\Assessments\\A1\\02_Working"
         parks = "A:\\Winter2021\\GIS4211\\Assessments\\A1\\01_SourceData\\parks_GDB\\parks.gdb\\parks"
@@ -57,5 +46,4 @@ def GdbsToFds():  # GDBs To Feature Dataset
         return UTMZone10
 
 if __name__ == '__main__':
-    main(*argv[1:])   
-    # GdbsToFds(*argv[1:])
+    GdbsToFds(*argv[1:])
