@@ -18,6 +18,8 @@ def main():
         
     arcpy.env.overwriteOutput = True
     
+    #ExecuteError: ERROR 999999: Something unexpected caused the tool to fail. Contact Esri Technical Support (http://esriurl.com/support) to Report a Bug, and refer to the error help for potential solutions or workarounds.Failed to execute (CreateFileGDB)
+    
     Geodatabase_path = arcpy.CreateFileGDB_management(in_gdbs_folder,out_gdb)[0]
     arcpy.env.workspace = in_gdbs_folder
     
@@ -40,6 +42,6 @@ def main():
     print(Geodatabase_path,"was created")   
     print(FeatureClass_path, "was created") 
                
-
+# Issue with the running when I tried running in the terminal 
 if __name__ == '__main__':
         main( ) 
